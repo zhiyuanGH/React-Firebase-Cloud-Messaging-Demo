@@ -4,22 +4,21 @@
 import { initializeApp } from 'firebase/app';
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
-var firebaseConfig = {
-  apiKey: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_API_KEY`,
-  authDomain: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_AUTH_DOMAIN`,
-  projectId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_PROJECT_ID`,
-  storageBucket: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_STORAGE_BUCKET`,
-  messagingSenderId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_SENDER_ID`,
-  appId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_APP_ID`,
-  measurementId: `REPLACE_WITH_YOUR_FIREBASE_MESSAGING_MEASUREMENT_ID`,
+const firebaseConfig = {
+  apiKey: "AIzaSyAM5Oe4WKQlFk8X9xFrU3NnqjpgF7iX_Jg",
+  authDomain: "my-react-firebase-app-993b2.firebaseapp.com",
+  projectId: "my-react-firebase-app-993b2",
+  storageBucket: "my-react-firebase-app-993b2.appspot.com",
+  messagingSenderId: "993414589695",
+  appId: "1:993414589695:web:b4701a394ecc124378f0ca",
+  measurementId: "G-V58ZKRE44D"
 };
-
 initializeApp(firebaseConfig);
 
 const messaging = getMessaging();
 
 export const requestForToken = () => {
-  return getToken(messaging, { vapidKey: `REPLACE_WITH_YOUR_VAPID_KEY` })
+  return getToken(messaging, { vapidKey: `BIYrbAag7Mp5U5THsoGoo1CPu-F2-9H64WmJIJn7RQxR10_k3JOjMKK4_b9hTkuoI65MMc0NJra1A4ScfzKyAOg` })
     .then((currentToken) => {
       if (currentToken) {
         console.log('current token for client: ', currentToken);
