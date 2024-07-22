@@ -13,7 +13,7 @@ pnpm install
 2. Once the dependencies are installed, run the development server with:
 
 ```bash
-pnpm dev
+pnpm start
 ```
 
 
